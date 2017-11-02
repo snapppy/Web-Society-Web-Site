@@ -1,0 +1,81 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 10% 10% 20% 60%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                         "nav"
+                         "carousel"
+                         "motto";
+}
+
+header {
+    grid-area: header;
+    background-color: #333;
+    height: 150px;
+
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1.5fr 1fr;
+    grid-template-areas: "logo society-name"
+                         "logo school-name";
+
+}
+
+#logo {
+    grid-area: logo;
+    justify-self: end;
+    align-self: center;
+    margin: 0;
+    padding-right: 10px;
+}
+
+#society-name {
+    grid-area: society-name;
+    color: #fff;
+    align-self: end;
+    margin: 0;
+
+}
+
+#school-name {
+    grid-area: school-name;
+    color: #fff;
+    align-self: start;
+    margin: 0;
+}
+
+nav {
+    grid-area: nav;
+    height 100px;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    font-size: 28px;
+    list-style: none;
+    justify-items: center;
+    padding: 0;
+}
+
+#carousel {
+    grid-area: carousel;
+    background-color: gainsboro;
+    height: 400px;
+    margin: 0% 10%;
+    margin-bottom: 5%;
+}
+
+#motto {
+    grid-area: motto;
+    background-color: #8CC63F;
+    height: 300px;
+}
