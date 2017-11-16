@@ -18,21 +18,10 @@ header {
     grid-area: header;
     background-color: #333;
     height: 150px;
-
-    display: grid;
-    grid-template-columns: 20% 80%;
-    grid-template-rows: 1.5fr 1fr;
-    grid-template-areas: "logo society-name"
-                         "logo school-name";
-
 }
 
 #logo {
-    grid-area: logo;
-    justify-self: end;
-    align-self: center;
-    margin: 0;
-    padding-right: 10px;
+    max-height: 150px;
 }
 
 #society-name {
