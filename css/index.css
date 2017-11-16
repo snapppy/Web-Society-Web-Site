@@ -1,18 +1,14 @@
+/* This code removes added browser stylings*/
 html, body {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-body {
-    display: grid;
-    grid-template-rows: 10% 10% 20% 60%;
-    grid-template-columns: 1fr;
-    grid-template-areas: "header"
-                         "nav"
-                         "carousel"
-                         "motto";
-}
+/* Header CSS
+* Content:
+*     This holds the site logo
+*/
 
 header {
     grid-area: header;
@@ -24,20 +20,10 @@ header {
     max-height: 150px;
 }
 
-#society-name {
-    grid-area: society-name;
-    color: #fff;
-    align-self: end;
-    margin: 0;
-
-}
-
-#school-name {
-    grid-area: school-name;
-    color: #fff;
-    align-self: start;
-    margin: 0;
-}
+/* Navigation Bar CSS
+* Content:
+*     This holds the links for Projects, Leadership and Tutorials.
+*/
 
 nav {
     grid-area: nav;
@@ -50,9 +36,62 @@ nav ul {
     grid-template-columns: 1fr 1fr 1fr;
 
     font-size: 28px;
+
     list-style: none;
     justify-items: center;
     padding: 0;
+}
+
+nav ul li a {
+    /*Sets the color of the nav links, turns off underlining for the links*/
+    color: #333;
+    text-decoration: none;
+}
+
+/* Footer CSS
+* Content:
+*     This holds the footer information
+*/
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    font: 14px;
+}
+
+/* Template Page CSS
+* Content:
+*     Header, nav, footer
+* Comment:
+*     Other pages should use a similar set up, with a different grid layout
+*     applied on their body depending on their content needs.
+*/
+#template-page {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+        "nav"
+        "footer";
+}
+
+/* Home Page CSS
+ * Content:
+ *     Header, nav, a carousel for events/activities/projects, and a motto
+ * Comment:
+ *     Other pages should use a similar set up, with a different grid layout
+ *     applied on their body depending on their content needs.
+*/
+#home-page {
+    display: grid;
+    grid-template-rows: 10% 10% 20% 50% 10%;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+                         "nav"
+                         "carousel"
+                         "motto"
+                         "footer";
 }
 
 #carousel {
@@ -66,5 +105,5 @@ nav ul {
 #motto {
     grid-area: motto;
     background-color: #8CC63F;
-    height: 300px;
+    height: 200px;
 }
