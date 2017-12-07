@@ -96,10 +96,45 @@ footer {
 
 #carousel {
     grid-area: carousel;
-    background-color: gainsboro;
+    display: grid;
     height: 400px;
     margin: 0% 10%;
     margin-bottom: 5%;
+
+    overflow: hidden;
+}
+
+.carousel-img {
+    width: 800px;
+    max-height: 400px;
+    margin-left: 15%;
+    position: absolute;
+    opacity:0;
+    -webkit-animation-name: css-animation-fade;
+    -webkit-animation-duration: 25s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#carousel .carousel-img:nth-child(2) {
+    -webkit-animation-delay: 5s;
+}
+
+#carousel .carousel-img:nth-child(3) {
+    -webkit-animation-delay: 10s;
+}
+#carousel .carousel-img:nth-child(4) {
+    -webkit-animation-delay: 15s;
+}
+#carousel .carousel-img:nth-child(5) {
+    -webkit-animation-delay: 20s;
+}
+
+@-webkit-keyframes css-animation-fade{
+    from { opacity:0;}
+    5% {opacity: 1;}
+    15% {opacity: 1;}
+    20% {opacity: 0;}
+    to {opacity: 0;}
 }
 
 #motto {
